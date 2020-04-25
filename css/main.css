@@ -54,6 +54,42 @@ a {
 	text-decoration: none;
 	color: #000000;
 }
+a.main, input[type=submit] {
+	position: relative;
+	transition: color .5s cubic-bezier(.75,0,.125,1);
+	overflow: hidden;
+	background: none;
+	display: inline-block;
+	z-index: 0;
+}
+a.main:hover,input[type=submit]:hover {
+	color: #fff;
+}
+a.main::before,input[type=submit]::before {
+	position: absolute;
+	font-family: Material Icons,serif;
+    background-color: #151515;
+	content: "arrow_downward";
+	webkit-transition: -webkit-transform .5s cubic-bezier(.75,0,.125,1);
+    transition: -webkit-transform .5s cubic-bezier(.75,0,.125,1);
+    transition: transform .5s cubic-bezier(.75,0,.125,1);
+	transition: transform .5s cubic-bezier(.75,0,.125,1),-webkit-transform .5s cubic-bezier(.75,0,.125,1);
+	left: 0;
+	display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+	bottom: 100%;
+	align-items: center;
+	color: #fff;
+	z-index: -1;
+}
+#project a.main::before {
+	content:"arrow_forward";
+}
+a.main:hover::before,input[type=submit]:hover::before{
+	transform: translate3d(0,100%,0);
+}
 .container {
 	width: 1550px;
 	margin: 0 auto;
@@ -139,6 +175,13 @@ a.btn, input[type=submit] {
 	padding: 16px 47px;
 	border: 2px solid #000000;
 }
+input[type=submit] {
+	background-color: initial;
+	border: 1px solid #fff;
+	color: #fff;
+	width: initial;
+	cursor: pointer;
+}
 span.line {
 	width: 72px;
 	height: 3.5px;
@@ -207,6 +250,9 @@ footer p.logo {
 	margin-top: 40px;
 	font-weight: 400;
 }
+.bg-wave {
+	background-image: url(./img/wave.svg);
+}
 footer p {
 	font-size: 14px;
 	font-weight: 500;
@@ -222,15 +268,14 @@ input,textarea {
 	border: none;
 	border-bottom: 1px solid #fff;
 	width: 100%;
+	padding: 8px 8px 8px 32px;
 }
-input[type=submit] {
-	background-color: initial;
-	border: 1px solid #fff;
-	color: #fff;
-	width: initial;
-}
+
 label {
-	padding: 8px 8px 8px 16px ;
+	padding: 8px 8px 8px 32px ;
+}
+label:hover {
+	display: none;
 }
 .rPosition {
 	position: relative;
@@ -238,8 +283,32 @@ label {
 }
 .aPosition {
 	position: absolute;
+	left: 0;
 }
 .material-icon {
 	font-family: 'Material Icons';
     font-size: 24px;
+}
+footer .fab {
+	font-size: 20px;
+}
+.container-about .fab {
+	font-size: 29px;
+	margin: 0px 16px 8px 0;
+	color: #fff;
+}
+.fa-linkedin {
+	margin: 8px 8px 0 0;
+}
+.col span {
+	font-weight: bold;
+	color: #fff;
+}
+wave{0%{background-position-x:0}to{background-position-x:-1600px}}@keyframes wave{0%{background-position-x:0}to{background-position-x:-1600px}}.dd-animated-wave{position:relative;overflow:hidden}.dd-animated-wave--padded{padding-bottom:20vh!important}.dd-animated-wave__wave{background-repeat:repeat-x;height:20vh;width:100%;pointer-events:none;position:absolute;left:0;right:0;bottom:-2px;-webkit-animation:wave 25s linear infinite;animation:wave 25s linear infinite;background-position-y:top}
+@keyframes wave {
+	0%{
+		background-position-x: 0;
+	}to {
+		background-position-x: -1905px;
+	}
 }
