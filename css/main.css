@@ -54,6 +54,10 @@ a {
 	text-decoration: none;
 	color: #000000;
 }
+nav a:hover {
+	color: #000;
+	transition: 50		0ms;
+}
 a.main, input[type=submit] {
 	position: relative;
 	transition: color .5s cubic-bezier(.75,0,.125,1);
@@ -83,6 +87,15 @@ a.main::before,input[type=submit]::before {
 	align-items: center;
 	color: #fff;
 	z-index: -1;
+	box-sizing: border-box;
+	padding-right: 16px;
+}
+.bgc a.main:hover {
+	color: #091C27;
+}
+.bgc a.main::before {
+	background-color: #fff;
+	color: #091C27;
 }
 #project a.main::before {
 	content:"arrow_forward";
@@ -116,8 +129,9 @@ nav ul li {
 nav ul li a {
 	text-transform: uppercase;
 	font-size: 12px;
-	font-weight: 400;
 	margin-left: 78px;
+	color: rgba(0,0,0,.55);
+	font-weight: 500;
 }
 p.logo span {
 	font-weight: bold;
