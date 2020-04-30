@@ -74,7 +74,6 @@ a.main::before,button::before {
 	font-family: Material Icons,serif;
     background-color: #151515;
 	content: "arrow_downward";
-	webkit-transition: -webkit-transform .5s cubic-bezier(.75,0,.125,1);
     transition: -webkit-transform .5s cubic-bezier(.75,0,.125,1);
     transition: transform .5s cubic-bezier(.75,0,.125,1);
 	left: 0;
@@ -284,6 +283,9 @@ footer p.logo {
     filter: FlipV;
     -ms-filter: "FlipV";
 }
+.social a {
+	background-color: inherit;
+}
 .black-wave {
 	background-image: url(../img/black-wave.svg);
 }
@@ -325,6 +327,7 @@ label:hover {
 }
 footer .fab {
 	font-size: 20px;
+	background-color: inherit;
 }
 .container-about .fab {
 	font-size: 29px;
@@ -339,9 +342,25 @@ footer .fab {
 	color: #fff;
 }
 @keyframes wave {
-	0%{
+	from {
 		background-position-x: 0;
 	}to {
-		background-position-x: -1905px;
+		background-position-x: -3810px;
 	}
 }
+.labelFocus {
+	transition: all 200ms;
+	z-index: 5;
+}
+.inputHover {
+	color: #fff;
+	z-index: 150;
+}
+.inputHover:focus + .labelFocus,
+.inputHover:valid + .labelFocus {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+	transition: all 200ms;
+	padding-left: 0;
+}
+

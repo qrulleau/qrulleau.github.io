@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quentin Rulleau | Developer fullstack</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
@@ -26,8 +26,8 @@
         </div>
     </header>
     <section class="t-center space">
-        <h1>Hi, I'm Quentin Rulleau<br>I'm Fullstack developer.</h1>
-        <a class="btn space main" href="#">Let's make something great</a>
+        <h1>Hi, I'm Quentin Rulleau<br>I'm Full Stack developer.</h1>
+        <a class="btn space main" href="#about">Let's make something great</a>
     </section>
     <section id="about">
         <div class="bg-wave"></div>
@@ -95,21 +95,21 @@
         <div class="bgc">
             <h2>Contact</h2>
             <span class="line"></span>
-            <form action="" method="POST">
+            <form action="https://formspree.io/xnqgajbv" method="POST">
                 <div class="rPosition">
                     <i class="material-icon">person</i>
-                    <label class="aPosition" for="">Name</label>
-                    <input class="aPosition" type="text">
+                    <input class="aPosition inputHover" type="text" id="name" name="name" required>
+                    <label class="aPosition labelFocus" for="name">Name</label>
                 </div>
                 <div class="rPosition">
                     <i class="material-icon">email</i>
-                    <label class="aPosition" for="">Email</label>
-                    <input class="aPosition" type="email">
+                    <input class="aPosition inputHover form-control" type="email" id="email" name="email" required>
+                    <label class="aPosition labelFocus" for="email" >Email</label>
                 </div>
                 <div class="rPosition">
                     <i class="material-icon">comment</i>
-                    <label class="aPosition" for="">Message</label>
-                    <textarea class="aPosition" name="" id="" rows="1"></textarea>
+                    <textarea class="aPosition inputHover" rows="1" id="message" name="message" required></textarea>
+                    <label class="aPosition labelFocus" for="message">Message</label>
                 </div>
                 <button type="submit">Submit</button>
             </form>
@@ -129,7 +129,7 @@
                             <a href="#project"><p>Projects</p></a>
                             <a href="#contact"><p>Contact</p></a>
                         </div>
-                        <div>
+                        <div class="social">
                             <h5>Follow me</h5>
                             <a href="https://www.linkedin.com/in/quentin-rulleau-4b5822179/"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/qrulleau"><i class="fab fa-github"></i></a>
