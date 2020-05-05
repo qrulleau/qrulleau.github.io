@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-	font-family: 'Poppins', sans-serif;;
+	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 }
 ol, ul {
@@ -196,6 +196,7 @@ button {
 	color: #fff;
 	width: initial;
 	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
 }
 span.line {
 	width: 72px;
@@ -270,7 +271,7 @@ footer p.logo {
 }
 .bg-wave {
 	background-image: url(../img/wave.svg);
-	height: 20vh;
+	height: 19vh;
 	width: 100%;
 	background-repeat: repeat-x;
     animation: wave 25s linear infinite;
