@@ -1,4 +1,2 @@
-document.addEventListener("DOMcontentLoaded", function(){
-
-    let label = document.getElementsByClassName("labelFocus");
-});
+import AOS from 'aos';
+AOS.init({ disable: 'mobile' });
